@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html>
+
+    <head>
+        <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+        <script src="base.js"></script>
+    </head>
+
+    <body>
+        <a-scene background="color:#000000">
+            <a-camera position="0 0 5"></a-camera>
+
+            <!--For Base-->
+            <a-entity position="0 0 0" rotation="0 0 0" move-box>
+                <a-box></a-box>
+            </a-entity>
+
+            <a-assets>
+                <a-asset-item id="car" src="./lamborgini_terzo/scene.gltf"></a-asset-item>
+            </a-assets>
+
+            <a-entity
+            scale="0.03 0.03 0.03"
+            gltf-model="#car"
+            position="0 0 0"
+            rotation="0 90 0"
+          ></a-entity>
+
+        </a-scene>
+    </body>
+
+</html>
